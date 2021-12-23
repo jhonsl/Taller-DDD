@@ -1,21 +1,18 @@
 package co.com.softka.TallerDDD.clase;
 
 import co.com.sofka.domain.generic.Entity;
-import co.com.softka.TallerDDD.clase.values.Calificacion;
 import co.com.softka.TallerDDD.clase.values.IdTrabajoEnClase;
 import co.com.softka.TallerDDD.clase.values.Temas;
 
 import java.util.Objects;
 
-public class Trabajo_en_clase extends Entity<IdTrabajoEnClase>
+public class TrabajoEnClase extends Entity<IdTrabajoEnClase>
 {
     protected Temas temas;
-    protected Calificacion calificacion;
 
-    public Trabajo_en_clase(IdTrabajoEnClase entityId, Temas temas, Calificacion calificacion) {
+    public TrabajoEnClase(IdTrabajoEnClase entityId, Temas temas) {
         super(entityId);
         this.temas = temas;
-        this.calificacion = calificacion;
     }
 
     public void actualizarTemas(Temas temas){
@@ -24,9 +21,5 @@ public class Trabajo_en_clase extends Entity<IdTrabajoEnClase>
 
     public Temas temas() {
         return temas;
-    }
-
-    public Calificacion calificacion() {
-        return calificacion;
     }
 }

@@ -19,23 +19,23 @@ public class Estudiante extends Entity<IdEstudiante> {
     }
 
     public void hacerTarea(){
-        System.out.println(this.nombre + " ha hecho la tarea");
+        System.out.println(this.nombre() + " ha hecho la tarea");
     }
 
     public void resolverEvaluacion(){
-        System.out.println(this.nombre + " ha resuelto la evaluacion");
+        System.out.println(this.nombre() + " ha resuelto la evaluacion");
     }
 
     public void resolverTrabajoEnClase(){
-        System.out.println(this.nombre + " ha resuelto el trabajo en clase");
+        System.out.println(this.nombre() + " ha resuelto el trabajo en clase");
     }
 
-    public void entrarAclase(){
-        System.out.println(this.nombre + " ha entrado a clase");
+    public void actualizarPromedio(Promedio promedio){
+        this.promedio = promedio;
     }
 
-    public void salirDeClase(){
-        System.out.println(this.nombre + " ha salido de clase");
+    public void actualizarPuesto(Puesto puesto){
+        this.puesto = puesto;
     }
 
     public Nombre nombre() {
