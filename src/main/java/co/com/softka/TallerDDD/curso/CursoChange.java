@@ -34,7 +34,7 @@ public class CursoChange extends EventChange {
             var estudiante = curso.getEstudianteById(event.getIdEstudiante())
                     .orElseThrow(() -> new IllegalArgumentException("No se encuentra el estudiante deseado"));
 
-            curso.eliminarEstudiante(estudiante.identity());
+            curso.estudiantes.remove(estudiante);
         });
     }
 }
